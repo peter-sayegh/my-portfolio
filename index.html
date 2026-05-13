@@ -53,27 +53,61 @@
 
     <section id="projects">
         <h2>Electrical Engineering Projects (Graduate)</h2>
-        <div class="project">
-            <h3> Runway Detection for Autonomous Aircraft using Digital Signal Porcessing Techniques</h3>
-            <p>This report presents a digital signal processing (DSP) approach to runway detection for autonomous aircraft landing systems. The project leverages fundamental DSP techniques including edge detection, Hough transform, and frequency domain analysis to identify and track runway structures from aircraft camera imagery. The proposed system processes visual data through a multi-stage pipeline designed to extract geometric and textural features characteristic of runway environments. This project demonstrates practical applications of classical signal processing theory to modern autonomous vehicle navigation challenges.</p>
-            <a href="files/DSP_Project_Report.pdf" >View Report</a> <a href="https://github.com/peter-sayegh/runway-detection-dsp/tree/main" target="_blank"> View in GitHub</a>
-        </div>
-        <div class="project">
-            <h3>On-chip CMOS Feedback Amplifier Design</h3>
-            <p>This report presents the design of a two-stage Miller-compensated operational transconductance amplifier in 0.25 μm CMOS achieving 95 dB open-loop gain, 81.5° phase margin, 407 kHz closed-loop bandwidth with 10 V/V gain, and 13.7 μV output noise while consuming 247 μA from ±1.25 V supplies.
-                </p>
-            <a href="files/Project_OTA_PS_AA.pdf" >View Report</a>
-        </div>
-        
 
-        <div class="project">
-            <h3>All-Region DC Model for MOSFET with Physics-Based Parameter Extraction</h3>
-            <p>
-                This letter presents a physics-based approach for extracting device parameters and developing an all-region DC model for MOS transistors with uniform substrate. A systematic parameter extraction methodology is employed, utilizing transconductance-based threshold voltage extraction, geometry correction via maximum slope (g_m or transconductance) extrapolation, and mobility degradation characterization. The model incorporates effective mobility dependence, body effect, and accounts for short-geometry effects. 
-          </p>
-            <a href="files/MOS_TRANSISTORS_PROJECT.pdf" >View Report</a>
-        </div>
-       
+       <div class="project">
+     <h3>SignSpeak: Real-Time ASL Fingerspelling Recognition on a Microcontroller</h3>
+    <p>
+        An embedded AI system that performs real-time American Sign Language fingerspelling 
+        recognition entirely on-device, with no cloud dependency. Running on a Seeed Studio 
+        XIAO ESP32S3 Sense microcontroller, SignSpeak uses a 16,349-parameter depthwise-separable 
+        CNN (67.4 KB, INT8 quantized) achieving 97.4% accuracy on the Kaggle ASL benchmark, 
+        with end-to-end inference latency under 110 ms. The system outputs recognized letters 
+        to an OLED display with a 3-tier LED confidence indicator.
+    </p>
+    <a href="files/EMBEDDEDAI_REPORT_PAS_AVK_final.pdf">View Report</a>
+    <a href="https://youtu.be/SONzhjDayNQ" target="_blank">Watch Demo</a>
+    <a href="https://github.com/ArkaKhorchidian/SignSpeak" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>250 MS/s 8-bit Current-Steering DAC in 0.18 &micro;m CMOS</h3>
+        <p>
+          Design of a high-speed digital-to-analog converter targeting wireline transmitter
+          applications, delivering &ge;1.5 V<sub>pp,diff</sub> into a 100 &Omega; differential load with
+          SFDR exceeding 66 dB at the TT corner. The architecture uses a 3+5 segmented
+          current-steering topology with thermometer-encoded MSBs, per-cell 6-bit trim DACs for
+          &plusmn;10% mismatch correction, and retiming latches reducing inter-switch skew to ~1&ndash;2 ps.
+          DNL remains within &plusmn;2&times;10<sup>&minus;4</sup> LSB across all three process corners.
+        </p>
+        <a href="files/DAC_Project_PS_GT_6316-4.pdf">View Report</a>
+      </div>
+      
+      <div class="project">
+        <h3>Fully Differential Switched-Capacitor Amplifier in 0.18 &micro;m CMOS</h3>
+        <p>
+          Design of a fully differential switched-capacitor sample-and-hold amplifier with 2&times; gain,
+          intended as the residue amplification stage in a 7-bit 16 MHz pipelined ADC. The core is
+          a folded-cascode OTA achieving 56.64 dB DC gain, 71&deg; phase margin, 33.1 dB gain margin,
+          and 167 MHz closed-loop bandwidth, with a settling error of 0.09% and total power
+          consumption of 486.72 &micro;W. A switched-capacitor CMFB circuit stabilizes the output
+          common-mode at 0.9 V, achieving 333.4 dB CMRR.
+        </p>
+        <a href="files/ADV_ANALOG_REPORT_PS_GT_DE.pdf">View Report</a>
+      </div>
+      
+      <div class="project">
+        <h3>2-Stage Low-Noise Amplifier for Starlink Ka-Band (11.4&ndash;12.7 GHz)</h3>
+        <p>
+          Design of a two-stage GaAs FET LNA on Duroid 5880 substrate targeting the Starlink
+          customer terminal downlink band. The NE3210S01 HEMT was selected for its 0.34 dB NF<sub>min</sub>
+          at 12 GHz. The first stage is noise-matched to minimize Friis cascade noise figure; the
+          second stage is gain-matched using Smith chart techniques. The final design achieves
+          S<sub>21</sub> &gt; 23 dB, NF &lt; 0.9 dB, S<sub>11</sub> &lt; &minus;12 dB, and S<sub>22</sub> &lt; &minus;14 dB
+          across the band, with unconditional stability (&micro; &gt; 1) from 0.1&ndash;20 GHz,
+          IIP3 = 1 dBm, and 100 mW DC power.
+        </p>
+        <a href="files/2-Stage_LNA_Design-2.pdf">View Report</a>
+      </div>
         
     </section>
 
