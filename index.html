@@ -15,7 +15,9 @@
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#tests">Test Scores</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#independent">Independent</a></li>
+                <li><a href="#projects">Graduate</a></li>
+                <li><a href="#undergrad-projects">Undergraduate</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
@@ -72,9 +74,62 @@
         </div>
     </section>
 
+    <section id="independent">
+        <h2>Independent Projects</h2>
+        <p class="subsection-note">Self-initiated work outside of coursework, in analog IC design, power electronics, and embedded hardware.</p>
+
+        <div class="project">
+          <h3>SSCS Chipathon 2026: Photoplethysmography (PPG) Analog Front-End on GF180MCU</h3>
+          <span class="tag">May &ndash; November 2026 &middot; Report coming soon</span>
+          <p>
+            Team tapeout project in the IEEE SSCS Chipathon, designing a PPG analog front-end for
+            heart-rate sensing on the open-source GlobalFoundries GF180MCU PDK. The front-end chains a
+            pulsed LED driver, a capacitive-feedback transimpedance amplifier built around a
+            folded-cascode OTA, and active filtering with a fully differential amplifier.
+            My blocks include a pulsed LED driver (triode NMOS current-set device plus a switch
+            device, 8 mA peak) and a 25 &micro;A / 5 &micro;A NMOS bias current mirror laid out in a
+            common-centroid, guard-ringed array (83.4 &times; 9.0 &micro;m). Both layouts are DRC clean and
+            LVS matched, and schematics and layouts for the full design are complete.
+          </p>
+          <a href="https://github.com/jacklzhu7/chipathon-2026-ppg" target="_blank">View Team Repository</a>
+        </div>
+
+        <div class="project">
+          <h3>12 V to 5 V, 2 A Buck Converter Design</h3>
+          <span class="tag">October 2026 &middot; In progress &middot; Report coming soon</span>
+          <p>
+            Design of a 200 kHz buck converter from specification to component selection: inductor and
+            output capacitor sizing from ripple targets, conduction-loss and efficiency estimates, and
+            continuous- versus discontinuous-conduction checks across load. The design is being
+            verified against both an LTspice model and an independent cycle-by-cycle Python model, with
+            a hardware build and closed-loop control planned next.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>GPS Tracker Prototype: My First Hands-On Hardware Build</h3>
+          <span class="tag">December 2024 &ndash; January 2025 &middot; Early project</span>
+          <p>
+            My first step from theory into hardware, built to learn how integrated circuits and
+            embedded software come together on a real board. I paired an Adafruit Feather M0
+            (ATSAMD21 ARM Cortex-M0+ microcontroller) with an Ultimate GPS FeatherWing, which carries
+            a MediaTek GPS receiver IC, powered from USB or a 3.7 V, 3000 mAh LiPo cell. In Arduino
+            C++ I read the receiver's NMEA sentences over a serial (UART) link, parsed them with the
+            Adafruit GPS library, and printed latitude, longitude, altitude and satellite count to the
+            Serial Monitor once a valid fix was acquired. On an outdoor test the board reported a fix at
+            48&deg;42.74&prime; N, 2&deg;13.01&prime; E (171 m altitude, 3 satellites), matching my location at
+            &Eacute;cole Polytechnique in Palaiseau. I originally conceived it as a smart dog collar;
+            adding a wireless link to a phone was left for future work.
+            Along the way I learned to read IC datasheets, work with serial protocols and 3.3 V logic,
+            and debug hardware outdoors, which is what pushed me toward circuit design.
+          </p>
+          <a href="https://github.com/peter-sayegh/gps-tracker-prototype" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
     <section id="projects">
         <h2>Electrical Engineering Projects (Graduate)</h2>
-      
+
         <div class="project">
           <h3>SignSpeak: Real-Time ASL Fingerspelling Recognition on a Microcontroller</h3>
           <p>
@@ -89,7 +144,7 @@
           <a href="https://youtu.be/SONzhjDayNQ" target="_blank">Watch Demo</a>
           <a href="https://github.com/ArkaKhorchidian/SignSpeak" target="_blank">View on GitHub</a>
         </div>
-      
+
         <div class="project">
           <h3>250 MS/s 8-bit Current-Steering DAC in 0.18 &micro;m CMOS</h3>
           <p>
@@ -102,7 +157,7 @@
           </p>
           <a href="files/DAC_Project_PS_GT_6316-4.pdf">View Report</a>
         </div>
-      
+
         <div class="project">
           <h3>Fully Differential Switched-Capacitor Amplifier in 0.18 &micro;m CMOS</h3>
           <p>
@@ -115,7 +170,7 @@
           </p>
           <a href="files/ADV_ANALOG_REPORT_PS_GT_DE.pdf">View Report</a>
         </div>
-      
+
         <div class="project">
           <h3>2-Stage Low-Noise Amplifier for Starlink Ku-Band (11.4&ndash;12.7 GHz)</h3>
           <p>
@@ -129,7 +184,7 @@
           </p>
           <a href="files/2-Stage LNA Design-2.pdf">View Report</a>
         </div>
-      
+
         <div class="project">
           <h3>Runway Detection for Autonomous Aircraft using Digital Signal Processing Techniques</h3>
           <p>
@@ -143,7 +198,7 @@
           <a href="files/DSP_Project_Report.pdf">View Report</a>
           <a href="https://github.com/peter-sayegh/runway-detection-dsp/tree/main" target="_blank">View on GitHub</a>
         </div>
-      
+
         <div class="project">
           <h3>On-chip CMOS Feedback Amplifier Design</h3>
           <p>
@@ -154,7 +209,7 @@
           </p>
           <a href="files/Project_OTA_PS_AA.pdf">View Report</a>
         </div>
-      
+
         <div class="project">
           <h3>All-Region DC Model for MOSFET with Physics-Based Parameter Extraction</h3>
           <p>
@@ -167,17 +222,40 @@
           </p>
           <a href="files/MOS_TRANSISTORS_PROJECT.pdf">View Report</a>
         </div>
-      
-      </section>
+
+        <div class="project">
+          <h3>Resonant Inductive Wireless Power Link: Pot-Core vs. Toroid Magnetics</h3>
+          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
+          <p>
+            High-frequency magnetics course project to design, build and characterize a resonant inductive
+            wireless power transfer (WPT) system that lights an LED circuit on a toy car as it rolls over a
+            transmitter coil. The preliminary targets are 100 kHz operation, 20 W delivered (12 V square-wave
+            drive, 5 V / 4 A rectified output) and at least 70% efficiency. I am sizing the magnetics analytically
+            (turns, wire gauge, gap, core and copper loss) for two core families, a TDK P22/13 pot core and
+            toroidal cores, and comparing how core geometry affects coupling, losses and efficiency. Next steps
+            are Maxwell finite-element simulation, winding the coils, tuning the series resonant capacitors and the
+            rectifier, and measuring delivered power and efficiency versus gap and misalignment against a
+            coupled-coil circuit model.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Hall-Sensor BLDC Drive with PID-Fuzzy Speed Control</h3>
+          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
+          <p>
+            Replication of a published PID-fuzzy speed controller for a three-phase brushless DC motor
+            (<em>Energies</em> 2024, 17(6), 1311), which uses sinusoidal commutation with third-harmonic injection and
+            estimates speed from the timing of Hall-sensor edges. I am building the Simulink model of the drive,
+            with a hardware implementation planned on an STM32 NUCLEO-G474RE and an X-NUCLEO-IHM07M1
+            three-phase driver board (L6230) running a Hall-sensor BLDC motor with an inertia disc.
+          </p>
+        </div>
+
+    </section>
 
 
     <section id="undergrad-projects">
         <h2>Research and Academic Projects (Undergraduate) </h2>
-        <div class="project">
-            <h3>Dynamic Stability and Levitation Control in Maglev Systems</h3>
-            <p>As part of a research-oriented team study on Maglev trains, we developped theoretical models, a tailored experimental setup, and numerical simulations, to demonstrate effective levitation control strategies that enhance system stability.</p>
-            <a href="files/MAGLEV_VF.pdf" >View Draft Paper</a>
-        </div>
         <div class="project">
             <h3>Ultrafast Nonlinear Acoustics in Free-standing Membranes at the Nanoscale</h3>
             <p>This paper explores the properties of nonlinear acoustic strain wave propagation in solid crystals,
@@ -193,9 +271,9 @@
         </div>
         <div class="project">
             <h3>Rogue Waves Dynamics using Physics-Informed Neural Networks (PINNs)</h3>
-            <p> Rogue waves are rare, unpredictable surface waves that exceed twice the height of surrounding waves and can appear suddenly from unexpected directions. 
-                Unlike tsunamis, these localized phenomena—sometimes surpassing 30 meters—arise from nonlinear energy focusing and pose significant risks to even the largest ships.This study focuses on training PINNs to solve the self-focusing Non-Linear Schrödinger equation and model the balance between
-                nonlinearity and viscosity. This internship took place at LadHyX under the supervision of Prof. Christophe Josserand in January-March 2025. 
+            <p> Rogue waves are rare, unpredictable surface waves that exceed twice the height of surrounding waves and can appear suddenly from unexpected directions.
+                Unlike tsunamis, these localized phenomena—sometimes surpassing 30 meters—arise from nonlinear energy focusing and pose significant risks to even the largest ships. This study focuses on training PINNs to solve the self-focusing Non-Linear Schrödinger equation and model the balance between
+                nonlinearity and viscosity. This internship took place at LadHyX under the supervision of Prof. Christophe Josserand in January-March 2025.
                 </p>
             <a href="files/SAYEGH_THESIS_REPORT.pdf" >View Report</a>
         </div>
@@ -203,18 +281,33 @@
         <div class="project">
             <h3>Predicting Travel Insurance Purchases Using Machine Learning</h3>
             <p>
-                This project implemented several machine learning concepts to predict travel insurance purchases, focusing on key features like Annual Income and Travel History. Models like Logistic Regression, KNN, Neural Networks, and Decision Trees were trained on a dataset of 2,000 samples. 
+                This project implemented several machine learning concepts to predict travel insurance purchases, focusing on key features like Annual Income and Travel History. Models like Logistic Regression, KNN, Neural Networks, and Decision Trees were trained on a dataset of 2,000 samples.
                 Despite class imbalance, Decision Trees and Gradient Boosting provided the best results with an accuracy of 83.4%. The model helps insurance companies target potential buyers efficiently, improving marketing and resource allocation.
           </p>
             <a href="files/Predicting Travel Insurance Purchases Using Machine Learning.pdf" >View Presentation</a>
             <a href="https://github.com/peter-sayegh/travel-insurance-prediction" target="_blank"> View in GitHub</a>
         </div>
-        <div class="project"> 
+        <div class="project">
             <h3> Concept Note-taking Application</h3>
             <p>
-            We developped a WebApp using Object-Oriented Programming in C++ and UI design in QML. Concept is a note-taking application that allow you to take notes in Markdown format and organize them in a file list structure. The application is written in C++ and use the Qt framework for the GUI. This project is a CMake project and it is available for Windows, Linux and MacOS.
+            We developed a WebApp using Object-Oriented Programming in C++ and UI design in QML. Concept is a note-taking application that allows you to take notes in Markdown format and organize them in a file list structure. The application is written in C++ and uses the Qt framework for the GUI. This project is a CMake project and it is available for Windows, Linux and MacOS.
             </p>
             <a href="https://github.com/ConceptTeam/Concept" target="_blank"> View in GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Construction and Characterization of a Lithium-Ion Coin Cell</h3>
+            <p>
+                Laboratory project (LAB103) carried out with Vlad-&#536;tef&#259;nu&#539; Radu in September 2022. We built two
+                coin-cell lithium-ion batteries (CR2025 and CR2032 formats) from scratch: graphite anode and
+                LiMn<sub>2</sub>O<sub>4</sub> cathode pastes bound with PTFE on stainless-steel mesh current collectors, a lithium
+                triflate / propylene carbonate electrolyte, and a microfiber separator, sealed with a hydraulic press.
+                After an unmeasured first cycle, we ran four charge&ndash;discharge cycles per cell, recording current, voltage and
+                time to compute capacity and Coulombic efficiency (mean 70.6% and 58.5% for the two cells). We propagated
+                measurement uncertainties to a 99% confidence level, compared our results with published values for
+                commercial cells, and analyzed the likely causes of the gap, such as residual moisture and variability in
+                electrode preparation.
+            </p>
+            <a href="files/LAB103_Lithium_Ion_Battery_Report.pdf">View Report</a>
         </div>
         <div class="project">
         <h3>Virtual Campaigns, Real Results:
@@ -225,13 +318,10 @@
 
             </p>
             <a href="files/HSS252_PS_FINAL_ESSAY-3.pdf" > View Essay</a>
-       
+
 
         </div>
     </section>
-
-    
-     
 
     <section id="contact">
         <h2>Contact Me</h2>
@@ -246,7 +336,7 @@
             </div>
         </div>
         <footer>
-            <p>&copy; 2024 NextGen Scholar</p>
+            <p>&copy; 2026 Peter A. Sayegh</p>
         </footer>
     </section>
 
