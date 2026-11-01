@@ -131,6 +131,34 @@
         <h2>Electrical Engineering Projects (Graduate)</h2>
 
         <div class="project">
+          <h3>Resonant Inductive Wireless Power Link: Pot-Core vs. Toroid Magnetics</h3>
+          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
+          <p>
+            High-frequency magnetics course project to design, build and characterize a resonant inductive
+            wireless power transfer (WPT) system that lights an LED circuit on a toy car as it rolls over a
+            transmitter coil. The preliminary targets are 100 kHz operation, 20 W delivered (12 V square-wave
+            drive, 5 V / 4 A rectified output) and at least 70% efficiency. I am sizing the magnetics analytically
+            (turns, wire gauge, gap, core and copper loss) for two core families, a TDK P22/13 pot core and
+            toroidal cores, and comparing how core geometry affects coupling, losses and efficiency. Next steps
+            are Maxwell finite-element simulation, winding the coils, tuning the series resonant capacitors and the
+            rectifier, and measuring delivered power and efficiency versus gap and misalignment against a
+            coupled-coil circuit model.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Hall-Sensor BLDC Drive with PID-Fuzzy Speed Control</h3>
+          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
+          <p>
+            Replication of a published PID-fuzzy speed controller for a three-phase brushless DC motor
+            (<em>Energies</em> 2024, 17(6), 1311), which uses sinusoidal commutation with third-harmonic injection and
+            estimates speed from the timing of Hall-sensor edges. I am building the Simulink model of the drive,
+            with a hardware implementation planned on an STM32 NUCLEO-G474RE and an X-NUCLEO-IHM07M1
+            three-phase driver board (L6230) running a Hall-sensor BLDC motor with an inertia disc.
+          </p>
+        </div>
+
+        <div class="project">
           <h3>SignSpeak: Real-Time ASL Fingerspelling Recognition on a Microcontroller</h3>
           <p>
             An embedded AI system that performs real-time American Sign Language fingerspelling
@@ -223,33 +251,6 @@
           <a href="files/MOS_TRANSISTORS_PROJECT.pdf">View Report</a>
         </div>
 
-        <div class="project">
-          <h3>Resonant Inductive Wireless Power Link: Pot-Core vs. Toroid Magnetics</h3>
-          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
-          <p>
-            High-frequency magnetics course project to design, build and characterize a resonant inductive
-            wireless power transfer (WPT) system that lights an LED circuit on a toy car as it rolls over a
-            transmitter coil. The preliminary targets are 100 kHz operation, 20 W delivered (12 V square-wave
-            drive, 5 V / 4 A rectified output) and at least 70% efficiency. I am sizing the magnetics analytically
-            (turns, wire gauge, gap, core and copper loss) for two core families, a TDK P22/13 pot core and
-            toroidal cores, and comparing how core geometry affects coupling, losses and efficiency. Next steps
-            are Maxwell finite-element simulation, winding the coils, tuning the series resonant capacitors and the
-            rectifier, and measuring delivered power and efficiency versus gap and misalignment against a
-            coupled-coil circuit model.
-          </p>
-        </div>
-
-        <div class="project">
-          <h3>Hall-Sensor BLDC Drive with PID-Fuzzy Speed Control</h3>
-          <span class="tag">Fall 2026 &middot; In progress &middot; Report coming soon</span>
-          <p>
-            Replication of a published PID-fuzzy speed controller for a three-phase brushless DC motor
-            (<em>Energies</em> 2024, 17(6), 1311), which uses sinusoidal commutation with third-harmonic injection and
-            estimates speed from the timing of Hall-sensor edges. I am building the Simulink model of the drive,
-            with a hardware implementation planned on an STM32 NUCLEO-G474RE and an X-NUCLEO-IHM07M1
-            three-phase driver board (L6230) running a Hall-sensor BLDC motor with an inertia disc.
-          </p>
-        </div>
 
     </section>
 
